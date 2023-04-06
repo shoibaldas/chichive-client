@@ -1,66 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link} from "react-router-dom";
 import {
   AiOutlineMenu,
   AiOutlineClose,
   AiOutlineShoppingCart,
 } from "react-icons/ai";
+import useNavbarBackground from "../../hooks/NavbarBackground/useNavbarBackground";
 
 const Navbar = () => {
-  // const [nav, setNav] = useState(false);
-  // const [color, setColor] = useState("transparent");
-  // const [textColor, setTextColor] = useState("white");
-
-  // const handleNav = () => {
-  //   setNav(!nav);
-  // };
-
-  // useEffect(() => {
-  //   const changeColor = () => {
-  //     if (window.scrollY >= 90) {
-  //       setColor("#ffffff");
-  //       setTextColor("#000000");
-  //     } else {
-  //       setColor("transparent");
-  //       setTextColor("#ffffff");
-  //     }
-  //   };
-  //   window.addEventListener("scroll", changeColor);
-  // }, []);
-  const location = useLocation();
   const [nav, setNav] = useState(false);
-  const [color, setColor] = useState("transparent");
-  const [textColor, setTextColor] = useState("white");
+  const { color, textColor } = useNavbarBackground();
 
   const handleNav = () => {
     setNav(!nav);
   };
-
-  useEffect(() => {
-    if (location.pathname === "/") {
-      if (textColor) {
-        setTextColor("gray" || "white");
-      } else {
-        setTextColor("white");
-      }
-    } else {
-      setTextColor("black");
-      setColor("white");
-    }
-  }, [location.pathname, color]);
-
-  useEffect(() => {
-    const changeColor = () => {
-      if (window.scrollY >= 90) {
-        setColor("#ffffff");
-        setTextColor("#000000");
-      } else {
-        setColor("transparent");
-        setTextColor("#ffffff");
-      }
-    };
-    window.addEventListener("scroll", changeColor);
-  }, []);
 
   return (
     <div
