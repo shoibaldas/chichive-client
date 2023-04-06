@@ -63,7 +63,7 @@ const Testimonial = () => {
         <div className="container mx-auto px-4 py-12 ">
         <h2 className="text-3xl text-center font-bold mb-5 relative text-gray-800">
   Hear From Our Happy Customers
-  <span className="block h-1 w-7/12 md:w-3/12 bg-sky-600 absolute left-1/2 transform -translate-x-1/2 z-10"></span>
+  <span className="block h-1 w-5/12 md:w-[480px] bg-sky-600 absolute top-15 md:top-10 left-1/2 transform -translate-x-1/2 z-99"></span>
 </h2>
       <Swiper
         
@@ -91,7 +91,7 @@ const Testimonial = () => {
       >
         {testimonials.map((testimonial) => (
           <SwiperSlide key={testimonial.id}>
-            <div className="p-6 bg-white rounded-lg shadow-md md:h-80 lg:h-72">
+            <div className="p-6 mt-12 bg-white rounded-lg shadow-md md:h-80 lg:h-72">
               <p className="text-lg mb-4">{testimonial.quote}</p>
               <div className="flex items-center">
                 <img
