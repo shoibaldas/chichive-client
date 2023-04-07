@@ -4,11 +4,11 @@ import { Outlet } from 'react-router-dom';
 
 const ProductPage = () => {
     return (
-        <div className='flex md:flex-row flex-col'>
-            <div className='md:w-3/12 flex justify-center'>
+        <div className='flex justify-center md:flex-row flex-col'>
+            <div className='md:w-2/12 flex justify-center md:justify-end mt-5 md:mt-20'>
                 <LeftSideBar></LeftSideBar>
             </div>
-            <div className='md:w-9/12'>
+            <div className='md:w-7/12'>
                 <Outlet></Outlet>
             </div>
         </div>

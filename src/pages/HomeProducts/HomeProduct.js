@@ -1,11 +1,11 @@
 import React from "react";
 
 const HomeProduct = ({ product }) => {
-  const { title, name, picture } = product;
+  const { title, price, picture } = product;
 
   return (
     <div>
-      <a aria-label="View Item">
+      <a>
         <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
           <img
             className="object-cover w-full h-56 md:h-64 xl:h-80"

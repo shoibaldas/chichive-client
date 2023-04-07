@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BiCategory, BiSearchAlt } from "react-icons/bi";
+import { TfiViewListAlt } from "react-icons/tfi";
 import { Link } from 'react-router-dom';
 
 const LeftSideBar = () => {
@@ -14,12 +15,12 @@ const LeftSideBar = () => {
     console.log(categories)
     return (
         <div className=''>
-            <div className="flex flex-col min-h-screen my-20 rounded-md p-3 w-60 dark:bg-gray-900 dark:text-gray-100">
+            <div className="flex flex-col my-20 rounded-md p-3 w-60">
                 <div className="space-y-3">
                     <div className="flex items-center justify-between">
-                        <h2 className='text-md font-semibold'>All Courses</h2>
+                        <h2 className='text-md font-semibold'>Categories</h2>
                         <div className='p-2  text-sky-500'>
-                            <BiCategory className='h-6 w-6'></BiCategory>
+                            <TfiViewListAlt className='h-6 w-6'></TfiViewListAlt>
                         </div>
 
                     </div>
@@ -29,15 +30,15 @@ const LeftSideBar = () => {
                                 <BiSearchAlt className='h-6 w-6'></BiSearchAlt>
                             </button>
                         </span>
-                        <input type="search" name="Search" placeholder="Search..." className="w-full py-2 pl-10 text-sm dark:border-transparent rounded-md focus:outline-none dark:bg-gray-800 dark:text-gray-100 focus:dark:bg-gray-900" />
+                        <input type="search" name="Search" placeholder="Search..." className="w-full py-2 pl-10 text-sm dark:border-transparent rounded-md focus:outline-none bg-gray-400" />
                     </div>
                     <div className="flex-1">
                         <ul className="pt-2 pb-4 space-y-1 text-sm">
                             {
-                                categories.map(category => <li className="rounded-sm hover:dark:bg-gray-800" key={category._id}>
-                                    <Link rel="noopener noreferrer" to={`/course/${category._id}`} className="flex items-center p-2 space-x-3">
-                                        <div className={category.color} >
-                                            <i className={category.icon}></i>
+                                categories.map(category => <li className="rounded-sm hover:bg-gray-400" key={category._id}>
+                                    <Link rel="noopener noreferrer" to={`/categories/${category._id}`} className="flex items-center p-2 space-x-3">
+                                        <div className='text-sky-500'>
+                                        <BiCategory className='h-4 w-4'></BiCategory>
                                         </div>
                                         <h2 className='text-md tex-2xl'>{category.name}</h2>
                                     </Link>
