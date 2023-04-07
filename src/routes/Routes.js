@@ -23,12 +23,12 @@ export const routes = createBrowserRouter([
                     {
                         path: '/products',
                         element: <Products></Products>,
-                        loader: () => fetch('http://localhost:5000/products')
+                        loader: () => fetch('https://chichive-server.vercel.app/products')
                     },
                     {
                         path: "/categories/:id",
                         element: <Products></Products>,
-                        loader: ({ params }) => fetch(`http://localhost:5000/categories/${params.id}`)
+                        loader: ({ params }) => fetch(`https://chichive-server.vercel.app/categories/${params.id}`)
                     },
                 ]
             },
