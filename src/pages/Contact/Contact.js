@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import { AiFillCloseCircle } from "react-icons/ai";
+import img from "../../assets/contact.svg";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -11,7 +12,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
+
     const errors = {};
     if (!name.trim()) {
       errors["name"] = "Name is required";
@@ -21,12 +22,12 @@ const Contact = () => {
     } else if (!/\S+@\S+\.\S+/.test(email)) {
       errors["email"] = "Email is invalid";
     }
-  
+
     if (Object.keys(errors).length > 0) {
-        setErrors(errors);
-        return;
-      }
-  
+      setErrors(errors);
+      return;
+    }
+
     Swal.fire({
       icon: "success",
       title: "Success!",
@@ -40,19 +41,13 @@ const Contact = () => {
   };
 
   return (
-    <div className="h-screen">
-      <div className="flex items-center justify-center h-[14rem] md:h-[18.6rem] mb-12 bg-fixed bg-center bg-cover custom-img">
-        {/* Overlay */}
-        <div className="absolute top-0 left-0 right-0 bottom-[39.2rem] md:bottom-[40.5rem] bg-black/70 z-[2]" />
-        <div className="text-white z-[2]">
-          <h2 className="text-3xl mt-20 font-semibold">
-            Home <span className="text-gray-300">/ Contact</span>
-          </h2>
-        </div>
+    <div className="min-h-screen max-w-screen-xl mx-auto flex items-center">
+      <div className="md:w-1/2 hidden md:flex justify-center">
+        <img src={img} className="w-full lg:max-w-md" alt="" />
       </div>
-      <div className="flex justify-center">
+      <div className="w-11/12 md:w-1/2">
         <form
-          className="max-w-lg w-full bg-gray-50 rounded-lg shadow-lg p-8"
+          className="max-w-lg w-full bg-gray-50 rounded-lg shadow-lg p-12 mx-auto my-10 sm:my-20 md:my-32 lg:my-42"
           onSubmit={handleSubmit}
         >
           <h2 className="text-2xl font-bold mb-6 text-gray-800">
@@ -106,8 +101,7 @@ const Contact = () => {
               rows="4"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-            >
-            </textarea>
+            ></textarea>
           </div>
           <button
             className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
