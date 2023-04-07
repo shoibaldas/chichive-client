@@ -33,8 +33,9 @@ export const routes = createBrowserRouter([
                 ]
             },
             {
-                path:'/booking',
-                element:<Booking></Booking>
+                path:'/booking/product/:id',
+                element:<Booking></Booking>,
+                loader: ({params})=>fetch(`https://chichive-server.vercel.app/booking/product/${params.id}`)
             },
             {
                 path:'/about',
