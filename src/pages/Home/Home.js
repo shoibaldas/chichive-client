@@ -4,8 +4,11 @@ import Testimonial from "../../components/Testimonial/Testimonial";
 import NewsLetter from "../../components/NewsLetter/NewsLetter";
 import Feature from "../../components/Feature/Feature";
 import HomeProducts from "../HomeProducts/HomeProducts";
+import TitleHead from "../../hooks/TitleHead/TitleHead";
 
 const Home = () => {
+  TitleHead("Chichive");
+
   return (
     <div>
       <Hero

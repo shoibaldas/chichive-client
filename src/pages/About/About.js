@@ -6,10 +6,13 @@ import img3 from "../../assets/hoodie.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import TeamMember from "./TeamMember";
+import TitleHead from "../../hooks/TitleHead/TitleHead";
 
 AOS.init();
 
 const About = () => {
+  TitleHead("About Us");
+
   const teamMembers = [
     {
       name: "Jane Doe",

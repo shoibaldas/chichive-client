@@ -5,6 +5,7 @@ import { MdEmail, MdOutlinePhoneAndroid, MdSpeakerNotes } from "react-icons/md";
 import { FaUserCircle, FaHome } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 import Invoice from "../../components/Invoice/Invoice";
+import TitleHead from "../../hooks/TitleHead/TitleHead";
 
 const Booking = () => {
   const [name, setName] = useState("");
@@ -16,6 +17,7 @@ const Booking = () => {
   const [showAlert, setShowAlert] = useState(false);
 
   const product = useLoaderData();
+  TitleHead('Booking');
 
   const handleSubmit = (e) => {
     e.preventDefault();

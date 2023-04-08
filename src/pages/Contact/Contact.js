@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import Swal from "sweetalert2";
 import { AiFillCloseCircle } from "react-icons/ai";
 import img from "../../assets/contact.svg";
+import TitleHead from "../../hooks/TitleHead/TitleHead";
 
 const Contact = () => {
+  TitleHead("Contact Us");
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
