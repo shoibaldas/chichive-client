@@ -6,11 +6,13 @@ import Contact from "../pages/Contact/Contact";
 import Products from "../pages/Products/Products";
 import Booking from "../pages/Booking/Booking";
 import ProductPage from "../layout/ProductPage";
+import ErrorPage from "../components/ErrorPage/404";
 
 export const routes = createBrowserRouter([
     {
         path:'/',
         element:<Main></Main>,
+        errorElement:<ErrorPage></ErrorPage>,
         children:[
             {
                 path:'/',
@@ -19,6 +21,7 @@ export const routes = createBrowserRouter([
             {
                 path: '/',
                 element: <ProductPage></ProductPage>,
+                errorElement:<ErrorPage></ErrorPage>,
                 children: [
                     {
                         path: '/products',
