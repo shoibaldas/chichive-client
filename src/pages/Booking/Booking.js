@@ -6,6 +6,7 @@ import { FaUserCircle, FaHome } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 import Invoice from "../../components/Invoice/Invoice";
 import TitleHead from "../../hooks/TitleHead/TitleHead";
+import ScrollToTop from "../../hooks/ScrollToTop/ScrollToTop";
 
 const Booking = () => {
   const [name, setName] = useState("");
@@ -67,6 +68,7 @@ const Booking = () => {
 
   return (
     <div className="min-h-screen max-w-screen-xl mx-auto flex flex-col md:flex-row justify-center items-center">
+      <ScrollToTop></ScrollToTop>
       <div className="w-full md:w-5/12 mt-20 md:mt-0 flex justify-center">
         <Invoice product={product}></Invoice>
       </div>
