@@ -12,7 +12,10 @@ const Hero = ({ heading, message }) => {
         <h2 className="text-5xl font-bold">{heading}</h2>
         <p className="py-5 text-xl ">{message}</p>
         <div className="mt-8">
-          <Link to='/products' className="px-8 py-2 border hover:bg-black hover:border-0 transition ease-in duration-500">
+          <Link
+            to="/products"
+            className="px-8 py-2 border hover:bg-black hover:border-0 transition ease-in duration-500"
+          >
             Shop Now{" "}
           </Link>
         </div>
@@ -20,6 +23,7 @@ const Hero = ({ heading, message }) => {
       <div
         data-aos="fade-up-left"
         data-aos-duration="1000"
+        data-aos-mirror="true"
         className="hidden md:flex items-center justify-center -mx-4 -mt-20 lg:pl-6 z-[2]"
       >
         <div className="flex flex-col items-end">

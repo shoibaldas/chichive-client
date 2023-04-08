@@ -40,10 +40,10 @@ const HomeProducts = () => {
         <Link
           to="/products"
           aria-label=""
-          className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+          className="inline-flex items-center bg-gray-600 hover:bg-black text-white py-2 px-4 rounded transition-colors ease-in duration-200"
         >
           View All
-          <MdOutlineArrowForwardIos className="w-6 ml-2"></MdOutlineArrowForwardIos>
+          <MdOutlineArrowForwardIos className="w-6 ml-1"></MdOutlineArrowForwardIos>
         </Link>
       </div>
     </div>
