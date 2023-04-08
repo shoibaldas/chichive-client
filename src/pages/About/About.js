@@ -14,8 +14,7 @@ const About = () => {
     {
       name: "Jane Doe",
       title: "Fashion Designer",
-      photo:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fHBlcnNvbnxlbnwwfDF8MHx8&auto=format&fit=crop&w=500&q=60",
+      photo: "https://i.ibb.co/Gdy3YNy/woman1.jpg",
       instagram: "https://www.instagram.com",
       twitter: "https://www.twitter.com",
       facebook: "https://www.facebook.com",
@@ -23,8 +22,7 @@ const About = () => {
     {
       name: "John Smith",
       title: "Fashion Stylist",
-      photo:
-        "https://images.unsplash.com/photo-1611432579402-7037e3e2c1e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=765&q=80",
+      photo: "https://i.ibb.co/1Gq4v7R/woman2.jpg",
       instagram: "https://www.instagram.com",
       twitter: "https://www.twitter.com",
       facebook: "https://www.facebook.com",
@@ -32,8 +30,7 @@ const About = () => {
     {
       name: "Sara Johnson",
       title: "Fashion Model",
-      photo:
-        "https://images.unsplash.com/photo-1598257006458-087169a1f08d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      photo: "https://i.ibb.co/jHHSM9G/woman3.jpg",
       instagram: "https://www.instagram.com",
       twitter: "https://www.twitter.com",
       facebook: "https://www.facebook.com",

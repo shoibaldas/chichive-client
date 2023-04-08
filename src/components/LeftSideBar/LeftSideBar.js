@@ -12,7 +12,7 @@ const LeftSideBar = () => {
             .then(data => setCategories(data))
     }, [])
 
-    console.log(categories)
+
     return (
         <div className=''>
             <div className="flex flex-col my-20 rounded-md p-3 w-60">

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Link} from "react-router-dom";
 import {
   AiOutlineMenu,
@@ -23,7 +23,7 @@ const Navbar = () => {
       <div className="max-w-[1240px] m-auto flex justify-between items-center p-4 text-white">
         <Link href="/">
           <h1 style={{ color: `${textColor}` }} className="font-bold text-4xl">
-            Chichive
+            Chichive.
           </h1>
         </Link>
         <ul style={{ color: `${textColor}` }} className="hidden sm:flex">

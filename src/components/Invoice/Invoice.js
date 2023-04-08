@@ -1,24 +1,23 @@
 import React, { useEffect, useState } from "react";
-import invoiceImage from "../../assets/woman1.jpg";
 
 const Invoice = ({ product }) => {
-    const [currentDate, setCurrentDate] = useState("");
+  const [currentDate, setCurrentDate] = useState("");
 
-    useEffect(() => {
-      const date = new Date();
-      const options = { year: "numeric", month: "long", day: "numeric" };
-      const formattedDate = date.toLocaleDateString("en-US", options);
-      setCurrentDate(formattedDate);
-    }, []);
+  useEffect(() => {
+    const date = new Date();
+    const options = { year: "numeric", month: "long", day: "numeric" };
+    const formattedDate = date.toLocaleDateString("en-US", options);
+    setCurrentDate(formattedDate);
+  }, []);
 
   return (
-    <div className="container mx-auto p-8 bg-white text-gray-800">
-      <div className="flex justify-between items-center border-b-2 pb-4 mb-8">
+    <div className="container mx-auto p-4 sm:p-8 bg-white text-gray-800">
+      <div className="flex flex-col sm:flex-row justify-between items-center border-b-2 pb-4 mb-8">
         <h1 className="text-2xl font-bold">Booking Invoice</h1>
         <p className="text-gray-600">Invoice #001</p>
       </div>
-      <div className="flex justify-between mb-8">
-        <div className="w-1/3">
+      <div className="flex flex-col sm:flex-row justify-between mb-8">
+        <div className="w-full sm:w-1/3">
           <h2 className="text-lg font-bold mb-4">Booking Date:</h2>
           <p className="text-gray-600">{currentDate}</p>
         </div>
@@ -49,8 +48,8 @@ const Invoice = ({ product }) => {
           </tr>
         </tbody>
       </table>
-      <div className="flex justify-end">
-        <div className="w-1/3">
+      <div className="flex flex-col sm:flex-row justify-end">
+        <div className="w-full sm:w-1/3">
           <table className="w-full">
             <tbody>
               <tr>

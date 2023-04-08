@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
-import { AiFillCloseCircle, AiOutlineShoppingCart } from "react-icons/ai";
+import { AiFillCloseCircle } from "react-icons/ai";
+import { MdEmail, MdOutlinePhoneAndroid, MdSpeakerNotes } from "react-icons/md";
+import { FaUserCircle, FaHome } from "react-icons/fa";
 import { useLoaderData } from "react-router-dom";
 import Invoice from "../../components/Invoice/Invoice";
 
@@ -62,9 +64,8 @@ const Booking = () => {
   };
 
   return (
-    <div className="min-h-screen max-w-screen-xl mx-auto flex justify-center items-center">
-      <div className="md:w-5/12 hidden md:flex justify-center">
-        {/* <h1 className="text-black">{product.title}</h1> */}
+    <div className="min-h-screen max-w-screen-xl mx-auto flex flex-col md:flex-row justify-center items-center">
+      <div className="w-full md:w-5/12 mt-20 md:mt-0 flex justify-center">
         <Invoice product={product}></Invoice>
       </div>
       <div className="w-11/12 md:w-1/2">
@@ -72,14 +73,12 @@ const Booking = () => {
           className="max-w-lg w-full bg-gray-50 rounded-lg shadow-lg p-12 mx-auto my-10 sm:my-20 md:my-32 lg:my-42"
           onSubmit={handleSubmit}
         >
-          {/* <h2 className="text-2xl font-bold mb-6 text-gray-800">
-            Book your Product
-          </h2> */}
-          <div className="mb-6">
+         <div className="mb-6">
             <label
-              className="block font-bold mb-2 text-gray-800"
+              className="inline-flex items-center font-bold mb-2 text-gray-800"
               htmlFor="name"
             >
+              <span className="mr-1 text-indigo-700"><FaUserCircle></FaUserCircle></span>
               Name
             </label>
             <input
@@ -94,9 +93,10 @@ const Booking = () => {
           </div>
           <div className="mb-6">
             <label
-              className="block font-bold mb-2 text-gray-800"
+              className="inline-flex items-center font-bold mb-2 text-gray-800"
               htmlFor="email"
             >
+              <MdEmail className="mr-1 text-indigo-700"></MdEmail>
               Email
             </label>
             <input
@@ -111,9 +111,10 @@ const Booking = () => {
           </div>
           <div className="mb-6">
             <label
-              className="block font-bold mb-2 text-gray-800"
+              className="inline-flex items-center font-bold mb-2 text-gray-800"
               htmlFor="name"
             >
+              <MdOutlinePhoneAndroid className="mr-1 text-indigo-700"></MdOutlinePhoneAndroid>
               Phone
             </label>
             <input
@@ -128,9 +129,10 @@ const Booking = () => {
           </div>
           <div className="mb-6">
             <label
-              className="block font-bold mb-2 text-gray-800"
+              className="inline-flex items-center font-bold mb-2 text-gray-800"
               htmlFor="name"
             >
+              <FaHome className="mr-1 text-indigo-700"></FaHome>
               Address
             </label>
             <input
@@ -145,9 +147,10 @@ const Booking = () => {
           </div>
           <div className="mb-6">
             <label
-              className="block font-bold mb-2 text-gray-800"
+              className="inline-flex items-center font-bold mb-2 text-gray-800"
               htmlFor="message"
             >
+              <MdSpeakerNotes className="mr-1 text-indigo-700"></MdSpeakerNotes>
               Note
             </label>
             <textarea

@@ -19,7 +19,7 @@ const Feature = () => {
 
         <div className="mt-10">
           <div className="flex flex-col md:flex-row justify-center items-center">
-            <div className="lg:w-1/4 px-4 mb-8">
+            <div data-aos="fade-up" data-aos-duration="1000" className="lg:w-1/4 px-4 mb-8">
               <div className="flex items-center flex-col text-center">
                 <div className="w-16 h-16 flex items-center justify-center rounded-full bg-green-100 mb-2">
                   <FaShippingFast className="text-green-500 text-3xl" />
@@ -37,7 +37,7 @@ const Feature = () => {
               </div>
             </div>
 
-            <div className="lg:w-1/4 px-4 mb-8">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000" className="lg:w-1/4 px-4 mb-8">
               <div className="flex items-center flex-col text-center">
                 <div className="w-16 h-16 flex items-center justify-center rounded-full bg-yellow-200 mb-2">
                   <FaUndo className="text-yellow-500 text-3xl" />
@@ -53,7 +53,7 @@ const Feature = () => {
               </div>
             </div>
 
-            <div className="lg:w-1/4 px-4 mb-8">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="2000" className="lg:w-1/4 px-4 mb-8">
               <div className="flex items-center flex-col text-center">
                 <div className="icon-bg w-16 h-16 flex items-center justify-center rounded-full bg-blue-100 mb-2">
                   <FaCheck className="text-blue-500 text-3xl" />
@@ -69,7 +69,7 @@ const Feature = () => {
               </div>
             </div>
 
-            <div className="lg:w-1/4 px-4 mb-8">
+            <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="3000" className="lg:w-1/4 px-4 mb-8">
               <div className="flex items-center flex-col text-center">
                 <div className="icon-bg w-16 h-16 flex items-center justify-center rounded-full bg-red-100 mb-2">
                   <FaShieldAlt className="text-red-500 text-3xl" />
