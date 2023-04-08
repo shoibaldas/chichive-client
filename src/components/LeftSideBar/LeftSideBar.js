@@ -15,7 +15,7 @@ const LeftSideBar = () => {
 
   return (
     <div className="">
-      <div className="flex flex-col my-20 rounded-md p-3 w-60">
+      <div className="flex flex-col mt-20 rounded-md p-3 w-60">
         <div className="space-y-3">
           <div className="flex items-center justify-between">
             <h2 className="text-md font-semibold">Categories</h2>

@@ -7,6 +7,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import TeamMember from "./TeamMember";
 import TitleHead from "../../hooks/TitleHead/TitleHead";
+import ScrollToTop from "../../hooks/ScrollToTop/ScrollToTop";
 
 AOS.init();
 
@@ -42,6 +43,7 @@ const About = () => {
 
   return (
     <div className="my-28 md:my-60">
+      <ScrollToTop></ScrollToTop>
       <div className="max-w-screen-lg min-h-screen  mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center">
           <div

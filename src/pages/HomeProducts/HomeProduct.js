@@ -16,7 +16,7 @@ const HomeProduct = ({ product }) => {
             <p className="mb-4 text-lg font-bold text-gray-100">{title}</p>
             <p className="mb-4 text-lg font-bold text-gray-100">{price}</p>
             <div className="flex justify-center">
-              <Link  to={`/booking/product/${product._id}`} className="mt-28 bg-gray-600 hover:bg-black text-white py-2 px-4 rounded">
+              <Link  to={`/booking/product/${product._id}`} className="mt-16 md:mt-28 bg-gray-600 hover:bg-black text-white py-2 px-4 rounded">
                 Book Now
               </Link>
             </div>

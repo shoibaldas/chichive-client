@@ -5,6 +5,7 @@ import { MdEmail, MdSpeakerNotes } from "react-icons/md";
 import { FaUserCircle } from "react-icons/fa";
 import img from "../../assets/contact.svg";
 import TitleHead from "../../hooks/TitleHead/TitleHead";
+import ScrollToTop from "../../hooks/ScrollToTop/ScrollToTop";
 
 const Contact = () => {
   TitleHead("Contact Us");
@@ -47,6 +48,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen max-w-screen-xl mx-auto flex items-center">
+      <ScrollToTop></ScrollToTop>
       <div className="md:w-1/2 hidden md:flex justify-center">
         <img src={img} className="w-full lg:max-w-md" alt="" />
       </div>
