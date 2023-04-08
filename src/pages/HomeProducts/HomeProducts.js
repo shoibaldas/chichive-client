@@ -12,8 +12,18 @@ const HomeProducts = () => {
     fetch("https://chichive-server.vercel.app/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
-      setLoading(false)
+    setLoading(false);
   }, []);
+
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
+  const shuffledProducts = shuffleArray(products);
 
   if (loading) {
     return <Loader></Loader>;
@@ -32,7 +42,7 @@ const HomeProducts = () => {
         </p>
       </div>
       <div className="grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
-        {products.slice(0, 8).map((product) => (
+        {shuffledProducts.slice(0, 8).map((product) => (
           <HomeProduct key={product._id} product={product}></HomeProduct>
         ))}
       </div>
