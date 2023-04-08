@@ -56,24 +56,30 @@ const Navbar = () => {
         <div
           className={
             nav
-              ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
-              : "sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-black text-center ease-in duration-300"
+              ? "sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen backdrop-blur-3xl bg-white/10 text-center ease-in duration-300"
+              : "sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen backdrop-blur-3xl bg-white/10 text-center ease-in duration-300"
           }
         >
+          
           <ul>
-            <li onClick={handleNav} className="p-4 text-gray-400">
+          <Link to="/">
+          <h1 style={{ color: `${textColor}` }} className="font-bold text-4xl">
+            Chichive.
+          </h1>
+        </Link>
+            <li onClick={handleNav} style={{ color: `${textColor}` }} className="p-4 text-gray-400">
               <Link to="/">Home</Link>
             </li>
-            <li onClick={handleNav} className="p-4 text-gray-400">
+            <li onClick={handleNav} style={{ color: `${textColor}` }} className="p-4 text-gray-400">
               <Link to="/products">Products</Link>
             </li>
-            <li onClick={handleNav} className="p-4 text-gray-400">
+            <li onClick={handleNav} style={{ color: `${textColor}` }} className="p-4 text-gray-400">
               <Link to="/about">About</Link>
             </li>
-            <li onClick={handleNav} className="p-4 text-gray-400">
+            <li onClick={handleNav} style={{ color: `${textColor}` }} className="p-4 text-gray-400">
               <Link to="/contact">Contact</Link>
             </li>
-            <li className="p-4 flex items-center justify-center text-gray-400">
+            <li style={{ color: `${textColor}` }} className="p-4 flex items-center justify-center text-gray-400">
               <AiOutlineShoppingCart className="text-xl"></AiOutlineShoppingCart>
             </li>
           </ul>
