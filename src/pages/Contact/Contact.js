@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import { AiFillCloseCircle } from "react-icons/ai";
-import { MdEmail, MdOutlinePhoneAndroid, MdSpeakerNotes } from "react-icons/md";
-import { FaUserCircle, FaHome } from "react-icons/fa";
+import { MdEmail, MdSpeakerNotes } from "react-icons/md";
+import { FaUserCircle } from "react-icons/fa";
 import img from "../../assets/contact.svg";
 import TitleHead from "../../hooks/TitleHead/TitleHead";
 
