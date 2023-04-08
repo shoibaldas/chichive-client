@@ -64,7 +64,7 @@ const Contact = () => {
               className="appearance-none bg-gray-100 border rounded-lg py-2 px-4 w-full leading-tight focus:outline-none focus:shadow-outline"
               id="name"
               type="text"
-              placeholder="John Doe"
+              placeholder="your name"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />

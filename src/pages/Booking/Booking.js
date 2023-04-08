@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import Swal from "sweetalert2";
 import { AiFillCloseCircle, AiOutlineShoppingCart } from "react-icons/ai";
 import { useLoaderData } from "react-router-dom";
+import Invoice from "../../components/Invoice/Invoice";
 
 const Booking = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  const [address, setAddress] = useState("");
   const [errors, setErrors] = useState({});
   const [showAlert, setShowAlert] = useState(false);
 
@@ -27,6 +29,9 @@ const Booking = () => {
     }
     if (!phone.trim()) {
       errors["phone"] = "Phone is required";
+    }
+    if (!address.trim()) {
+      errors["address"] = "Adress is required";
     }
     // } else if (!/^\d{10}$/.test(phone)) {
     //   errors["phone"] = "Phone number is invalid";
@@ -52,22 +57,24 @@ const Booking = () => {
     setName("");
     setEmail("");
     setPhone("");
+    setAddress("");
     setMessage("");
   };
 
   return (
-    <div className="min-h-screen max-w-screen-xl mx-auto flex items-center">
-      <div className="md:w-1/2 hidden md:flex justify-center">
-        <h1 className="text-black">{product.title}</h1>
+    <div className="min-h-screen max-w-screen-xl mx-auto flex justify-center items-center">
+      <div className="md:w-5/12 hidden md:flex justify-center">
+        {/* <h1 className="text-black">{product.title}</h1> */}
+        <Invoice product={product}></Invoice>
       </div>
       <div className="w-11/12 md:w-1/2">
         <form
           className="max-w-lg w-full bg-gray-50 rounded-lg shadow-lg p-12 mx-auto my-10 sm:my-20 md:my-32 lg:my-42"
           onSubmit={handleSubmit}
         >
-          <h2 className="text-2xl font-bold mb-6 text-gray-800">
+          {/* <h2 className="text-2xl font-bold mb-6 text-gray-800">
             Book your Product
-          </h2>
+          </h2> */}
           <div className="mb-6">
             <label
               className="block font-bold mb-2 text-gray-800"
@@ -79,7 +86,7 @@ const Booking = () => {
               className="appearance-none bg-gray-100 border rounded-lg py-2 px-4 w-full leading-tight focus:outline-none focus:shadow-outline"
               id="name"
               type="text"
-              placeholder="John Doe"
+              placeholder="your name"
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
@@ -122,6 +129,23 @@ const Booking = () => {
           <div className="mb-6">
             <label
               className="block font-bold mb-2 text-gray-800"
+              htmlFor="name"
+            >
+              Address
+            </label>
+            <input
+              className="appearance-none bg-gray-100 border rounded-lg py-2 px-4 w-full leading-tight focus:outline-none focus:shadow-outline"
+              id="name"
+              type="text"
+              placeholder="#House, #Road, #PO, #City"
+              value={address}
+              onChange={(e) => setAddress(e.target.value)}
+            />
+            {errors.address && <p className="text-red-500">{errors.address}</p>}
+          </div>
+          <div className="mb-6">
+            <label
+              className="block font-bold mb-2 text-gray-800"
               htmlFor="message"
             >
               Note
@@ -130,7 +154,7 @@ const Booking = () => {
               className="appearance-none bg-gray-100 border rounded-lg py-2 px-4 w-full leading-tight focus:outline-none focus:shadow-outline"
               id="message"
               placeholder="Write your message here"
-              rows="4"
+              rows="2"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
