@@ -64,7 +64,7 @@ const About = () => {
               comfortable in.
             </p>
             <div className="flex items-center mt-8">
-              <button className="bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded">
+              <button className="bg-indigo-500 hover:bg-indigo-600 text-white py-2 px-4 rounded">
                 Follow Us
               </button>
               <div className="flex ml-4">

@@ -5,6 +5,7 @@ import NewsLetter from "../../components/NewsLetter/NewsLetter";
 import Feature from "../../components/Feature/Feature";
 import HomeProducts from "../HomeProducts/HomeProducts";
 import TitleHead from "../../hooks/TitleHead/TitleHead";
+import ReachUs from "../../components/ReachUs/ReachUs";
 
 const Home = () => {
   TitleHead("Chichive");
@@ -19,6 +20,7 @@ const Home = () => {
       <Testimonial></Testimonial>
       <Feature></Feature>
       <NewsLetter></NewsLetter>
+      <ReachUs></ReachUs>
     </div>
   );
 };

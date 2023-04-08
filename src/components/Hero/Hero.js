@@ -2,6 +2,7 @@ import React from "react";
 import img1 from "../../assets/fashoin3.jpg";
 import img2 from "../../assets/fashon1.jpg";
 import img3 from "../../assets/fashion2.jpg";
+import { Link } from "react-router-dom";
 
 const Hero = ({ heading, message }) => {
   return (
@@ -11,9 +12,9 @@ const Hero = ({ heading, message }) => {
         <h2 className="text-5xl font-bold">{heading}</h2>
         <p className="py-5 text-xl ">{message}</p>
         <div className="mt-8">
-          <button className="px-8 py-2 border hover:bg-black hover:border-0 transition ease-in duration-100">
+          <Link to='/products' className="px-8 py-2 border hover:bg-black hover:border-0 transition ease-in duration-500">
             Shop Now{" "}
-          </button>
+          </Link>
         </div>
       </div>
       <div

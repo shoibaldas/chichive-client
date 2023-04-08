@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
 import { AiFillCloseCircle } from "react-icons/ai";
+import { MdEmail, MdOutlinePhoneAndroid, MdSpeakerNotes } from "react-icons/md";
+import { FaUserCircle, FaHome } from "react-icons/fa";
 import img from "../../assets/contact.svg";
 import TitleHead from "../../hooks/TitleHead/TitleHead";
 
@@ -58,9 +60,12 @@ const Contact = () => {
           </h2>
           <div className="mb-6">
             <label
-              className="block font-bold mb-2 text-gray-800"
+              className="inline-flex items-center font-bold mb-2 text-gray-800"
               htmlFor="name"
             >
+              <span className="mr-1 text-indigo-700">
+                <FaUserCircle></FaUserCircle>
+              </span>
               Name
             </label>
             <input
@@ -75,9 +80,10 @@ const Contact = () => {
           </div>
           <div className="mb-6">
             <label
-              className="block font-bold mb-2 text-gray-800"
+              className="inline-flex items-center font-bold mb-2 text-gray-800"
               htmlFor="email"
             >
+              <MdEmail className="mr-1 text-indigo-700"></MdEmail>
               Email
             </label>
             <input
@@ -91,10 +97,11 @@ const Contact = () => {
             {errors.email && <p className="text-red-500">{errors.email}</p>}
           </div>
           <div className="mb-6">
-            <label
-              className="block font-bold mb-2 text-gray-800"
+          <label
+              className="inline-flex items-center font-bold mb-2 text-gray-800"
               htmlFor="message"
             >
+              <MdSpeakerNotes className="mr-1 text-indigo-700"></MdSpeakerNotes>
               Message
             </label>
             <textarea
