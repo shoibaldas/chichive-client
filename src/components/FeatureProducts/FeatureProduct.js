@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const HomeProduct = ({ product }) => {
+const FeatureProduct = ({ product }) => {
   const { title, price, picture } = product;
 
   return (
@@ -34,4 +34,4 @@ const HomeProduct = ({ product }) => {
   );
 };
 
-export default HomeProduct;
+export default FeatureProduct;

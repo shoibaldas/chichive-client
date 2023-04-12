@@ -1,4 +1,6 @@
 import React from "react";
+import { FaQuoteLeft, FaQuoteRight} from "react-icons/fa";
+import { IoIosArrowDown} from "react-icons/io";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -7,6 +9,8 @@ import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper";
 SwiperCore.use([Pagination, Navigation, Autoplay]);
 
 const Testimonial = () => {
+  const slider1Class = 'testimonial';
+
   const testimonials = [
     {
       id: 1,
@@ -27,7 +31,7 @@ const Testimonial = () => {
     {
       id: 3,
       quote:
-        "I recently purchased a dress from Elegance and I couldn't be happier! The fit was perfect and the quality was top-notch. I received so many compliments when I wore it.",
+        "I can't get enough of the trendy pieces at this store! The quality is amazing and the staff is always so friendly and helpful.",
       author: "Maggie Brown",
       title: "Stylish Mom",
       image: "https://i.pravatar.cc/100?img=6",
@@ -43,7 +47,7 @@ const Testimonial = () => {
     {
       id: 5,
       quote:
-        "I never used to enjoy shopping for clothes until I found Chic Boutique. Their staff is so helpful and knowledgeable, and I always leave feeling great about my purchases.",
+        "The customer service at this fashion store is top-notch. They went above and beyond to make sure I found exactly what I was looking for.",
       author: "Karen Kim",
       title: "Fashion Novice",
       image: "https://i.pravatar.cc/100?img=8",
@@ -51,7 +55,7 @@ const Testimonial = () => {
     {
       id: 6,
       quote:
-        "As a plus-sized woman, it can be hard to find stylish clothing that fits well. That's why I love Allure - their clothes are not only fashionable but also cater to a range of body types.",
+        "I am so impressed with the unique selection of clothing and accessories. I always leave this store feeling like I found something special.",
       author: "Jessica Brown",
       title: "Body Positivity Advocate",
       image: "https://i.pravatar.cc/100?img=9",
@@ -59,17 +63,16 @@ const Testimonial = () => {
   ];
 
   return (
-    <section className="bg-gray-100">
-      <div className="container mx-auto px-4 py-12">
-        <h2 className="text-3xl text-center font-bold mb-5 relative text-gray-800">
-          Hear From Our Happy Customers
+    <section className="bg-gray-100 max-w-6xl mx-auto">
+      <div className="py-20">
+        <h2 className="text-3xl text-center font-bold mb-5 text-gray-800">
+          Our Happy Customers
         </h2>
         <p className="text-lg text-center leading-6 text-gray-600">
           Our customers love our fashion-forward styles and exceptional service.
         </p>
         <Swiper
-          spaceBetween={30}
-          autoplay={{ delay: 3500, disableOnInteractio: false }}
+          autoplay={{ delay: 2500, disableOnInteractio: false }}
           pagination={{
             clickable: true,
           }}
@@ -77,26 +80,31 @@ const Testimonial = () => {
           breakpoints={{
             360: {
               slidesPerView: 1,
-              spaceBetween: 30,
+              
             },
             768: {
               slidesPerView: 2,
-              spaceBetween: 30,
             },
-            991: {
-              slidesPerView: 3,
-              spaceBetween: 30,
-            },
+            // 991: {
+            //   slidesPerView: 2,
+            //   spaceBetween: -100,
+            // },
           }}
-          className="mySwiper"
+          className={`mySwiper ${slider1Class}`}
         >
           {testimonials.map((testimonial) => (
             <SwiperSlide key={testimonial.id}>
-              <div className="p-6 mt-12 bg-white rounded-lg shadow-md md:h-80 lg:h-72">
-                <p className="text-lg mb-4">{testimonial.quote}</p>
-                <div className="flex items-center">
+              <div className="mt-12 px-5 flex flex-col">
+                <div className="relative bg-white text-lg text-gray-600 leading-7 rounded-md shadow-lg p-12">
+                  <FaQuoteLeft className="absolute top-8 left-10 text-purple-500"></FaQuoteLeft>
+                  <p className="text-center">{testimonial.quote}</p>
+                  <FaQuoteRight className="absolute bottom-8 right-10 text-purple-500"></FaQuoteRight>
+                  
+                </div>
+                <div className="relative flex justify-center items-center max-w-md mx-auto p-10">
+                <IoIosArrowDown className="absolute -top-5 w-16 h-16 text-purple-300"></IoIosArrowDown>
                   <img
-                    className="w-12 h-12 rounded-full mr-4"
+                    className="w-12 h-12 rounded-full mr-4 border-double border-4 border-sky-700"
                     src={testimonial.image}
                     alt={testimonial.author}
                   />

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Swal from "sweetalert2";
-import { AiOutlineMail } from "react-icons/ai";
+import { MdConnectedTv } from "react-icons/md";
 
 const NewsLetter = () => {
   const [email, setEmail] = useState("");
@@ -25,20 +25,19 @@ const NewsLetter = () => {
 
   return (
     <section className="py-20 px-3 md:px-3 lg:px-3 xl:px-0">
-      <div className="max-w-6xl mx-auto rounded-md overflow-hidden shadow-md ">
-        <div className="bg-gray-800 px-5 py-8 flex flex-col md:flex-row md:justify-between md:items-center">
+      <div className="max-w-6xl mx-auto overflow-hidden border border-gray-900">
+        <div className="px-5 py-10 flex flex-col md:flex-row md:justify-between md:items-center">
           <div className="flex w-full lg:w-8/12 mb-10 md:mb-0">
             <div>
-              <AiOutlineMail className="text-3xl text-purple-700 me-2"></AiOutlineMail>
+              <MdConnectedTv className="text-3xl mt-[.2rem] text-gray-800 me-2"></MdConnectedTv>
             </div>
             <div>
-              <h2 className="text-3xl font-bold text-gray-200">Stay Tuned</h2>
+              <h2 className="text-3xl font-bold text-gray-800">Stay Tuned</h2>
               <div>
-                <p className="w-full md:w-8/12 text-gray-300">
+                <p className="w-full md:w-8/12 text-gray-800">
                   Stay in the loop with our latest fashion trends, exclusive
                   sales, and insider tips. Subscribe to our newsletter for all
-                  the exciting updates straight to your inbox. Sign up now and
-                  stay tuned!
+                  the exciting updates straight to your inbox!
                 </p>
               </div>
             </div>

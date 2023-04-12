@@ -1,6 +1,9 @@
 import React from "react";
-import { FaShippingFast, FaUndo, FaShieldAlt, FaCheck } from "react-icons/fa";
+import { FaShippingFast, FaCheck } from "react-icons/fa";
+import { GiReturnArrow } from "react-icons/gi";
+import { BsPatchCheckFill } from "react-icons/bs";
 import { TbCurrencyTaka } from "react-icons/tb";
+import { RiCustomerService2Line } from "react-icons/ri";
 
 const Feature = () => {
   return (
@@ -10,7 +13,7 @@ const Feature = () => {
           <h2 className="text-3xl font-bold mb-4 text-gray-800">
             Why Choose Us
           </h2>
-          <p className="text-lg leading-6 text-gray-600">
+          <p className="max-w-3xl mx-auto text-lg text-gray-600 leading-8">
             Stay ahead of the fashion game with our carefully curated
             collections of high-quality items, available on our easy-to-use
             website with fast shipping.
@@ -39,8 +42,8 @@ const Feature = () => {
 
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1000" className="lg:w-1/4 px-4 mb-8">
               <div className="flex items-center flex-col text-center">
-                <div className="w-16 h-16 flex items-center justify-center rounded-full bg-yellow-200 mb-2">
-                  <FaUndo className="text-yellow-500 text-3xl" />
+                <div className="w-16 h-16 flex items-center justify-center rounded-full bg-sky-100 mb-2">
+                  <GiReturnArrow className="text-sky-500 text-3xl" />
                 </div>
                 <div className="ml-3">
                   <h3 className="text-lg font-medium text-gray-900">
@@ -56,7 +59,7 @@ const Feature = () => {
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="2000" className="lg:w-1/4 px-4 mb-8">
               <div className="flex items-center flex-col text-center">
                 <div className="icon-bg w-16 h-16 flex items-center justify-center rounded-full bg-blue-100 mb-2">
-                  <FaCheck className="text-blue-500 text-3xl" />
+                  <BsPatchCheckFill className="text-blue-500 text-3xl" />
                 </div>
                 <div className="ml-3">
                   <h3 className="text-lg font-medium text-gray-900">
@@ -71,15 +74,15 @@ const Feature = () => {
 
             <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="3000" className="lg:w-1/4 px-4 mb-8">
               <div className="flex items-center flex-col text-center">
-                <div className="icon-bg w-16 h-16 flex items-center justify-center rounded-full bg-red-100 mb-2">
-                  <FaShieldAlt className="text-red-500 text-3xl" />
+                <div className="icon-bg w-16 h-16 flex items-center justify-center rounded-full bg-purple-100 mb-2">
+                  <RiCustomerService2Line className="text-purple-500 text-3xl" />
                 </div>
                 <div className="ml-3">
                   <h3 className="text-lg font-medium text-gray-900">
-                    Secure Guarantee
+                    Customer Service
                   </h3>
                   <p className="mt-2 text-sm text-gray-600">
-                    Your information is safe with us
+                  Exceptional customer service guaranteed
                   </p>
                 </div>
               </div>

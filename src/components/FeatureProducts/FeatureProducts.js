@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
-import HomeProduct from "./HomeProduct";
 import { Link } from "react-router-dom";
-import Loader from "../../components/Loader/Loader";
+import Loader from "../Loader/Loader";
+import FeatureProduct from "./FeatureProduct";
 
-const HomeProducts = () => {
+const FeatureProducts = () => {
   const [loading, setLoading] = useState(true);
   const [products, setProducts] = useState([]);
 
@@ -43,7 +43,7 @@ const HomeProducts = () => {
       </div>
       <div className="grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
         {shuffledProducts.slice(0, 8).map((product) => (
-          <HomeProduct key={product._id} product={product}></HomeProduct>
+          <FeatureProduct key={product._id} product={product}></FeatureProduct>
         ))}
       </div>
       <div className="text-center text-gray-800">
@@ -60,4 +60,4 @@ const HomeProducts = () => {
   );
 };
 
-export default HomeProducts;
+export default FeatureProducts;
