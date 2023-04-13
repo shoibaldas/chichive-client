@@ -1,27 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
-import { EffectCoverflow, Pagination, Navigation } from "swiper";
-
+import SwiperCore, {
+  EffectCoverflow,
+  Pagination,
+  Navigation,
+  Autoplay,
+} from "swiper";
 import "./Categories.css";
-
 import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineKeyboardArrowRight,
 } from "react-icons/md";
-
-import slide_image_1 from "../../assets/woman1.jpg";
-import slide_image_2 from "../../assets/woman3.jpg";
-import slide_image_3 from "../../assets/fashon1.jpg";
-import slide_image_4 from "../../assets/fashion2.jpg";
-import slide_image_5 from "../../assets/fashoin3.jpg";
-import slide_image_6 from "../../assets/woman3.jpg";
 import Loader from "../Loader/Loader";
+
+SwiperCore.use([Pagination, Navigation, Autoplay]);
 
 const FeatureCategories = () => {
   const [loading, setLoading] = useState(true);
@@ -50,39 +46,45 @@ const FeatureCategories = () => {
         </p>
       </div>
       <Swiper
-        effect={"coverflow"}
-        grabCursor={true}
-        centeredSlides={true}
-        loop={true}
-        slidesPerView={3}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 100,
-          modifier: 2.5,
-        }}
-        pagination={{ el: ".swiper-pagination", clickable: true }}
-        navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-          clickable: true,
-        }}
-        modules={[EffectCoverflow, Pagination, Navigation]}
-        autoplay={{ delay: 2500, disableOnInteractio: false }}
-        breakpoints={{
-          360: {
-            slidesPerView: "auto",
-          },
-          768: {
-            spaceBetween: 80,
-          },
-        }}
+         effect={"coverflow"}
+         grabCursor={true}
+         centeredSlides={true}
+         loop={true}
+         slidesPerView={3}
+         coverflowEffect={{
+           rotate: 0,
+           stretch: 0,
+           depth: 100,
+           modifier: 2.5,
+         }}
+         pagination={{ el: ".swiper-pagination", clickable: true }}
+         navigation={{
+           nextEl: ".swiper-button-next",
+           prevEl: ".swiper-button-prev",
+           clickable: true,
+         }}
+         modules={[EffectCoverflow, Pagination, Navigation]}
+         autoplay={{ delay: 2500, disableOnInteractio: false }}
+         breakpoints={{
+           360: {
+             slidesPerView: "auto",
+           },
+           768: {
+             spaceBetween: 80,
+           },
+         }}
         className="swiper-container mt-8"
       >
         <div>
           {categories.map((featureCategory) => (
             <SwiperSlide key={featureCategory._id} className="swipe-slide">
-              <img className="image " src={featureCategory.image} alt="slide_image" />
+              <img
+                className="image relative"
+                src={featureCategory.image}
+                alt="slide_image"
+              />
+               <div className="absolute top-0 left-0 right-0 bottom-0 bg-black/30 z-[2] rounded-[2rem]" />
+               <div className="absolute top-5 left-5 text-gray-200 z-[4] text-xl font-bold">{featureCategory.name}</div>
             </SwiperSlide>
           ))}
         </div>

@@ -1,7 +1,8 @@
 import React from "react";
 import { FaHandshake } from "react-icons/fa";
-import { MdOutlineEmail, MdOutlineEventAvailable } from "react-icons/md";
-import { BsMailbox } from "react-icons/bs";
+import { MdAddShoppingCart } from "react-icons/md";
+import { BsShopWindow } from "react-icons/bs";
+import { BiUserVoice } from "react-icons/bi";
 
 const ReachUs = () => {
   return (
@@ -16,10 +17,10 @@ const ReachUs = () => {
       <div className="flex flex-wrap justify-around">
         <div className="h-56 w-10/12 md:w-56 p-5 bg-white border border-gray-600 rounded-lg shadow-lg cursor-pointer mb-3">
           <div className="flex justify-center align-middle">
-            <BsMailbox className="h-10 w-10 text-sky-700"></BsMailbox>
+            <BsShopWindow className="h-10 w-10 text-sky-700"></BsShopWindow>
           </div>
           <div className="text-center my-4">
-            <p className="text-lg font-semibold text-gray-800">Postal Address</p>
+            <p className="text-lg font-semibold text-gray-800">Shop Address</p>
           </div>
           <div className="text-center">
             <p className="text-sm font-semibold text-gray-600">Chichive.</p>
@@ -33,7 +34,7 @@ const ReachUs = () => {
         </div>
         <div className="h-56 w-10/12 md:w-56 p-5 bg-white border border-gray-600 rounded-lg shadow-lg cursor-pointer mb-3">
           <div className="flex justify-center align-middle">
-            <MdOutlineEmail className="h-10 w-10 text-indigo-700"></MdOutlineEmail>
+            <BiUserVoice className="h-10 w-10 text-orange-800"></BiUserVoice>
           </div>
           <div className="text-center my-4">
             <p className="text-lg font-semibold text-gray-800">Phone & Email</p>
@@ -65,14 +66,19 @@ const ReachUs = () => {
         </div>
         <div className="h-56 w-10/12 md:w-56 p-5 bg-white border border-gray-600 rounded-lg shadow-lg cursor-pointer mb-3">
           <div className="flex justify-center align-middle">
-            <MdOutlineEventAvailable className="h-10 w-10 text-green-700"></MdOutlineEventAvailable>
+            <MdAddShoppingCart className="h-10 w-10 text-green-700"></MdAddShoppingCart>
           </div>
           <div className="text-center my-4">
-            <p className="text-lg font-semibold text-gray-800">Events</p>
+            <p className="text-lg font-semibold text-gray-800">
+              Online order issues?
+            </p>
           </div>
           <div className="text-center">
             <p className="text-sm font-semibold text-gray-600">
-              Each month at day 16!
+              Please reach at
+            </p>
+            <p className="text-sm font-semibold text-gray-600">
+              Phone: +8801777799990
             </p>
           </div>
         </div>
