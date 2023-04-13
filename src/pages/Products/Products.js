@@ -1,8 +1,8 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
-import HomeProduct from "../HomeProducts/HomeProduct";
 import TitleHead from "../../hooks/TitleHead/TitleHead";
 import ScrollToTop from "../../hooks/ScrollToTop/ScrollToTop";
+import FeatureProduct from "../../components/FeatureProducts/FeatureProduct";
 
 const Products = () => {
   TitleHead("All Products");
@@ -29,7 +29,7 @@ const Products = () => {
       </div>
       <div className="grid gap-6 row-gap-5 mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
         {shuffledProducts.map((product) => (
-          <HomeProduct key={product._id} product={product}></HomeProduct>
+          <FeatureProduct key={product._id} product={product}></FeatureProduct>
         ))}
       </div>
     </div>

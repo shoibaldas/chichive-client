@@ -14,7 +14,7 @@ const Hero = ({ heading, message }) => {
         <div className="mt-8">
           <Link
             to="/products"
-            className="px-8 py-2 border hover:bg-black hover:border-0 transition ease-in duration-500"
+            className="px-8 py-3 border hover:bg-black hover:border-0 transition ease-in duration-300"
           >
             Shop Now{" "}
           </Link>
